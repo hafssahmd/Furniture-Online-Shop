@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FurnitureStore - Quality Home Furnishings</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">FurnitureStore</a>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="nav-icons">
+          <a href="admin.html" class="admin-icon" title="Admin Panel">
+            <i class="fas fa-user-shield"></i>
+          </a>
+          <i class="fas fa-user" id="user-icon"></i>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart" id="cart-icon"></i>
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+      <h1>Crafting Timeless Spaces</h1>
+      <p>
+        Discover furniture that blends form and function with our carefully
+        curated collection of modern classics.
+      </p>
+      <button class="btn">View Collections</button>
+    </section>
+
+    <!-- this promotions section -->
+    <section class="promotions-section">
+      <div class="promotions-container">
+        <div class="promotions-carousel" id="promotions-carousel">
+          <!-- Promotions will be loaded here dynamically -->
+        </div>
+
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" id="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn next" id="next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-dots" id="carousel-dots">
+          <!-- Dots will be added dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <div class="filter-buttons">
+        <!-- Filter buttons will be added here dynamically -->
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products-container">
+      <!-- Products will be dynamically added here -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About FurnitureStore</h3>
+          <p>
+            We're dedicated to providing high-quality furniture and home decor
+            that combines style, comfort, and functionality.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 123 Furniture St, Design City
+          </p>
+          <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> info@furniturestore.com</p>
+        </div>
+        <div class="footer-column newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get updates on new arrivals and special offers.</p>
+          <input type="email" placeholder="Your email address" />
+          <button class="btn">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FurnitureStore. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="toggle-form" id="show-register">
+              Create Account
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Register</h2>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="register-name">Full Name</label>
+            <input type="text" id="register-name" required />
+          </div>
+          <div class="form-group">
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" required />
+          </div>
+          <div class="form-group">
+            <label for="register-password">Password</label>
+            <input type="password" id="register-password" required />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn">Register</button>
+            <button type="button" class="toggle-form" id="show-login">
+              Already have an account?
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cart-modal">
+      <div class="modal-content cart-modal">
+        <span class="close-btn">&times;</span>
+        <h2>Your Cart</h2>
+        <div class="cart-items" id="cart-items">
+          <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">Total: <span id="cart-total">$0.00</span></div>
+        <div class="cart-actions">
+          <button class="btn" id="continue-shopping">Continue Shopping</button>
+          <button class="btn" id="checkout">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="products-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
